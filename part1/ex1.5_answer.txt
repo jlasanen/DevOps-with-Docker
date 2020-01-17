@@ -1,0 +1,15 @@
+# running an ubuntu image with the specified process
+$ docker run -d --name ex1.5 -it ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+# installing curl while the image is waiting at input (and hasn't executed curl yet, so we have time to install it)
+$ docker exec -it ex1.5 sh -c 'apt-get update && apt-get install curl'
+# attach to the process (which has already echoed "Input website:" so it is not visible
+$ docker attach ex1.5
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>

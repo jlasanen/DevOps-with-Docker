@@ -1,0 +1,17 @@
+lasanenj@WMLI115374 MINGW64 ~/Documents/mooc-2019-devops-with-docker/DevOps-with-Docker/part1 (master)
+$ docker run -d --name ex1.4 devopsdockeruh/exec_bash_exercise
+53a4507a4419e4c66ce4b035ce0ed3e0b60e2eb475096054c996d65433435b2c
+
+lasanenj@WMLI115374 MINGW64 ~/Documents/mooc-2019-devops-with-docker/DevOps-with-Docker/part1 (master)
+$ docker exec -it ex1.4 tail -f ./logs.txt
+Mon, 21 Oct 2019 08:42:03 GMT
+Mon, 21 Oct 2019 08:42:06 GMT
+Mon, 21 Oct 2019 08:42:09 GMT
+Mon, 21 Oct 2019 08:42:12 GMT
+Secret message is:
+"Docker is easy"
+Mon, 21 Oct 2019 08:42:18 GMT
+Mon, 21 Oct 2019 08:42:21 GMT
+^C
+lasanenj@WMLI115374 MINGW64 ~/Documents/mooc-2019-devops-with-docker/DevOps-with-Docker/part1 (master)
+$

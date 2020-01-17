@@ -1,0 +1,4 @@
+# we need to create the file first so that is not mistaken as directory
+touch logs.txt
+docker run -v $(pwd)/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
